@@ -1,0 +1,32 @@
+{
+  "name": "node-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -L index.js",
+    "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V",
+    "docker:pro": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build -V",
+    "docker:node": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --no-deps node-app",
+    "docker:mongo": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --no-deps mongo",
+    "docker:scale": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --scale node-app=2",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.14",
+    "redis": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
