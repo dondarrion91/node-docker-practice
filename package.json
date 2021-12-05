@@ -8,6 +8,7 @@
     "dev": "nodemon -L index.js",
     "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V",
     "docker:pro": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build -V",
+    "docker:push": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml push node-app",
     "docker:node": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --no-deps node-app",
     "docker:mongo": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --no-deps mongo",
     "docker:scale": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -V --scale node-app=2",
