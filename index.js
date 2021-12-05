@@ -65,7 +65,7 @@ async function main() {
 }
 
 app.get("/api/v1/", (req, res) => {
-  res.send("<h1>Welcome to the blog api</h1>");
+  res.send("<h1>Welcome to the blog api man!!!</h1>");
   console.log("Yea it run!")
 });
 
